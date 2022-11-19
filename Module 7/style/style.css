@@ -1,0 +1,12 @@
+div{
+    width: 500px;
+    height: 200px;
+    border: 5px solid chocolate;
+    overflow-y: auto;
+}
+.one{
+    width: 500px;
+    height: 200px;
+    border: 5px solid chocolate;
+    overflow: scroll;
+}
