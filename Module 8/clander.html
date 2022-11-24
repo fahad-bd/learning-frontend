@@ -10,15 +10,37 @@
             height: 500px;
             display: grid;
             grid-template-columns: repeat(7, 1fr); /* every column will teke same size, 7 column will create  */
+            grid-template-rows: 2em;
             grid-gap: 1em;
         }
-        .date{
+        .date, .day{
             background-color: lightslategray;
+            font-size: 3em;
+            /* will 3 times big from previous size */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+        .other-month, .day{
+            background-color: lightgray;
+        }
+        .day{
+            font-size: 2em;
         }
     </style>
 </head>
 <body>
     <div class="calender">
+        <div class="day">S</div>
+        <div class="day">M</div>
+        <div class="day">T</div>
+        <div class="day">W</div>
+        <div class="day">T</div>
+        <div class="day">F</div>
+        <div class="day">S</div>
+        <div class="date other-month">34</div>
+        <div class="date other-month">35</div>
         <div class="date">1</div>
         <div class="date">2</div>
         <div class="date">3</div>
@@ -49,11 +71,9 @@
         <div class="date">28</div>
         <div class="date">29</div>
         <div class="date">30</div>
-        <div class="date">31</div>
-        <div class="date">32</div>
-        <div class="date">33</div>
-        <div class="date">34</div>
-        <div class="date">35</div>
+        <div class="date other-month">1</div>
+        <div class="date other-month">2</div>
+        <div class="date other-month">3</div>
     </div>
 </body>
 </html>
