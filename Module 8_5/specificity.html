@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Specificity</title>
+    <link rel="stylesheet" href="css/styles.css">
     <style>
         .first-heading{
             color: yellow;
+        }
+        #third{
+            color: red;
         }
         h1{
             background-color: chocolate;
@@ -21,7 +25,13 @@
 <body>
     <h1 class="first-heading">My heading number 1</h1>
     <h1 class="first-heading">My heading number 2</h1>
-    <h1 class="first-heading">My heading number 3</h1>
+    <h1 id="third" class="first-heading">My heading number 3</h1>
     <h1 class="">My heading number 4</h1>
+    <h1 style="color: black;">My heading number 5</h1>
+    <p>This is my text description-1</p>
+    <p>This is my text description-2</p>
+    <p>This is my text description-3</p>
+    <p>This is my text description-4</p>
+    <p>This is my text description-5</p>
 </body>
 </html>
