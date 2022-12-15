@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to my website</h1>
+    </header>
+    <main>
+        <section>
+            <article class="blog">
+                <h3 id="first">MyBlog-1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est velit quidem, asperiores exercitationem reprehenderit nisi qui soluta placeat neque impedit eaque repellendus, minima ullam. Fuga tenetur fugit officia totam repudiandae!</p>
+            </article>
+            <article class="blog">
+                <h3 id="title-2">MyBlog-2</h3>
+                <p>Ullam corporis ex, enim a consequatur incidunt ea itaque maxime cupiditate inventore asperiores provident facere quibusdam labore reiciendis soluta. Consequuntur blanditiis hic vel quaerat repudiandae autem non aliquam sint assumenda.</p>
+            </article>
+            <article class="blog">
+                <h3>MyBlog-3</h3>
+                <p>Delectus neque nobis laudantium sint est adipisci enim obcaecati ad autem itaque mollitia iusto minus odit ipsum modi culpa quod, veritatis sed unde quasi omnis? Quo asperiores incidunt itaque tempore.</p>
+            </article>
+        </section>
+    </main>
+    <script>
+        console.log(document);
+        console.log(document.body);
+        document.getElementById('title-2').style.color = 'red';
+        const first = document.getElementById('first');
+        first.style.textAlign = 'center';
+        const blogs = document.getElementsByClassName('blog');
+        for(const blog of blogs){
+            blog.style.border = '2px solid black';
+            blog.style.borderRadius = '10px';
+            blog.style.margin = '10px';
+        }
+    </script>
+</body>
+</html>
