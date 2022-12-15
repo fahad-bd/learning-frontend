@@ -11,6 +11,11 @@
         <h1>Welcome to my website</h1>
     </header>
     <main>
+        <ul id="blog-list">
+            <li>list-1</li>
+            <li>list-2</li>
+            <li>list-3</li>
+        </ul>
         <section>
             <article class="blog">
                 <h3 id="first">MyBlog-1</h3>
@@ -32,6 +37,28 @@
         document.getElementById('title-2').style.color = 'red';
         const first = document.getElementById('first');
         first.style.textAlign = 'center';
+        
+
+        // crete element by js
+        const li = document.createElement('li');
+        li.innerText = 'list-5';
+        //where to add
+        const ul = document.getElementById('blog-list');
+        //append new list
+        ul.appendChild(li);
+
+        //add artical
+        const artical = document.createElement('artical');
+        artical.classList.add('blog');
+        const h3 = document.createElement('h3');
+        h3.innerText = 'awesome blog-5';
+        const p = document.createElement('p');
+        p.innerText = "nice nice nice nince ajljajfjf fjrjoo jajla gjjshfa tjjopwq ajsh thry try to write habi jabi";
+        artical.appendChild(h3);
+        artical.appendChild(p);
+
+
+        //css with js
         const blogs = document.getElementsByClassName('blog');
         for(const blog of blogs){
             blog.style.border = '2px solid black';
