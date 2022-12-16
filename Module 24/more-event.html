@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>more event</title>
+</head>
+<body>
+    <h2>More Event</h2>
+    <section>
+        <h3 id="info">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid nisi eveniet optio voluptate nemo, perspiciatis facere eos dolorem sapiente est pariatur reiciendis doloremque ab laborum similique corrupti cum culpa! Velit?</h3>
+        <input id="delete-confirm" type="text" placeholder="Please type delete">
+        <button id="delete-btn" disabled>Delete</button>
+    </section>
+    <script>
+        document.getElementById('delete-btn').addEventListener('click', function(){
+            document.getElementById('info').style.display = 'none';
+        });
+
+        // focus input button
+        document.getElementById('delete-confirm').addEventListener('focus', function(){
+            document.body.style.backgroundColor = 'red';
+        });
+        // blur input button
+        document.getElementById('delete-confirm').addEventListener('blur', function(){
+            document.body.style.backgroundColor = 'white';
+        });
+/*
+
+        // keydown input button
+        document.getElementById('delete-confirm').addEventListener('keydown', function(){
+            const deleteField = document.getElementById('delete-confirm');
+            console.log(deleteField.value);
+        });
+        // keypress input button
+        document.getElementById('delete-confirm').addEventListener('keypress', function(){
+            const deleteField = document.getElementById('delete-confirm');
+            console.log(deleteField.value);
+        });
+
+        // keyup input button
+        document.getElementById('delete-confirm').addEventListener('keyup', function(){
+            const deleteField = document.getElementById('delete-confirm');
+            console.log(deleteField.value);
+        });
+*/
+        // keyup input button
+        document.getElementById('delete-confirm').addEventListener('keyup', function(event){
+            if(event.target.value == 'delete'){
+                document.getElementById('delete-btn').removeAttribute('disabled');
+            }
+            else{
+                document.getElementById('delete-btn').setAttribute('disabled', true);
+            }
+        });
+
+        // change input button
+        document.getElementById('delete-confirm').addEventListener('change', function(){
+            const deleteField = document.getElementById('delete-confirm');
+            console.log(deleteField.value);
+        });
+
+
+    </script>
+</body>
+</html>
