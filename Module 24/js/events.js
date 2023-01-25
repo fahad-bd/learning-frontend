@@ -19,10 +19,14 @@ const greenButton = document.getElementById('greenButton');
 greenButton.onclick = function makeGreen(){
     document.body.style.backgroundColor = 'green';
 }
+//other way
+// greenButton.onclick = function (){
+//     document.body.style.backgroundColor = 'green';
+// } 
 
 
 
-// golden rod
+// golden rod most use
 const goldenRodButton = document.getElementById('goldenRodButton');
 goldenRodButton.addEventListener('click', makeGoldenRod);
 
@@ -36,7 +40,7 @@ document.getElementById('goldenRodButton').addEventListener('click',function mak
     document.body.style.backgroundColor = 'goldenrod';
 })
 
-//other way
+//other way shortcut way most use
 document.getElementById('goldenRodButton').addEventListener('click',function (){
     document.body.style.backgroundColor = 'goldenrod';
 })

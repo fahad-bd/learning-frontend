@@ -21,13 +21,14 @@
     </section>
     <script>
 
-        document.getElementById('second-item').addEventListener('click', function(){
-            console.log('This is second item');
-        });
+        // document.getElementById('second-item').addEventListener('click', function(){
+        //     console.log('This is second item');
+        // });
 
 
-        document.getElementById('second-item').addEventListener('click', function(){
+        document.getElementById('second-item').addEventListener('click', function(event){
             console.log('second item');
+            event.stopPropagation();
         });
 
         // ul
