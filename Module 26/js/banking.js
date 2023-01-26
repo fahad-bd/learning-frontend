@@ -19,11 +19,19 @@ function updateTotalFiled(inputId, amount)
     total.innerText = previousTotal + amount;
 }
 
-function updateBalance(depositAmount, isAdd)
+function getCurrentBalance()
 {
     const total = document.getElementById('balance-total');
     const totalBalanceText = total.innerText;
     const previousBalance = parseFloat(totalBalanceText);
+
+    return previousBalance;
+}
+
+function updateBalance(depositAmount, isAdd)
+{
+    const total = document.getElementById('balance-total');
+    const previousBalance = getCurrentBalance();
 
     if(isAdd == 1){
         total.innerText = previousBalance + depositAmount;
@@ -37,11 +45,13 @@ document.getElementById('deposit-button').addEventListener('click', function(){
     
     const depositAmount = getInputValue('deposit-input');
     
-    updateTotalFiled('deposit-total',depositAmount);
+    if(depositAmount > 0)
+    {
+        updateTotalFiled('deposit-total',depositAmount);
 
-    //update balance
-    
-    updateBalance(depositAmount, 1);
+        //update balance
+        updateBalance(depositAmount, 1);
+    }
 
 });
 
@@ -51,9 +61,12 @@ document.getElementById('withdraw-button').addEventListener('click', function(){
     
     const withdrawAmount = getInputValue('withdraw-input');
 
-    updateTotalFiled('withdraw-total',withdrawAmount);
+    if(withdrawAmount > 0 && withdrawAmount <= getCurrentBalance())
+    {
+        updateTotalFiled('withdraw-total',withdrawAmount);
 
-    //update balance 
-    updateBalance(withdrawAmount, 0);
+        //update balance 
+        updateBalance(withdrawAmount, 0);
+    }
 
 });
