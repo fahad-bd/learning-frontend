@@ -13,3 +13,11 @@ console.log(generatePin());
 
 const aa = isNaN('10X');
 console.log(aa);
+
+
+str1 = 'bangladesh is a beautiful country';
+console.log(str1.endsWith("country"));
+
+str2 = 'i love coding more than eating';
+console.log(str2.slice(2,6));
+
