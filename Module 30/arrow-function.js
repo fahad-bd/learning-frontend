@@ -21,6 +21,5 @@ console.log(sum3);
 
 const add4 = (num1,num2) => num1+num2;
 
-
 const sum4 = add4(11,22);
 console.log(sum4);
